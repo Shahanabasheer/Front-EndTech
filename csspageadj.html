@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Page adjustments</title>
+		<style>
+			table.v3 {
+                visibility: collapse
+            }
+			table, tr, td{
+				border: 3px solid black;
+			}
+			th{
+				font-weight: bold;
+				color: red;
+			}
+			.box:hover {
+				border-color: yellow;
+			}	
+			.v1{
+                visibility: visible;
+            }
+			.v2{
+                visibility: hidden;
+            }	
+			.dis_inl{
+			display:inline;
+			}
+			.dis_block{
+			display:block;
+			}
+			.dis_none{
+			display:none;
+			}
+			dlist {
+			display: list-item;
+			list-style-position: inside;
+			}
+			.a::before {
+            content: "Welcome ";
+			}
+			html {
+                scroll-behavior: smooth;
+            }
+            
+			p#padd{
+				padding: 10px 20px;
+			}
+			p#mar{
+				margin-top: 50px;
+				margin-bottom: 30px;
+				margin-left: 50px;
+				margin-right: 40px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1>CSS Page adjustments</h1>
+		<h3>Name Table</h3>
+		<table class="box">
+			<tr>
+				<th>First name</th>
+				<th>Last name</th>
+			</tr>
+			<tr>
+				<td>Peter</td>
+				<td>John</td>
+			</tr>
+				<td>Bill</td>
+				<td>Gates</td>
+			<tr>
+			</tr>
+		</table>
+		<div id="top"><h3>Top of the page</h3></div>
+		<a href="#bottom">Go to the bottom!</a>
+		<div>
+			<h3>Visibility Property</h3>
+			<p>This property is used to specify whether an element is visible or not in a web document but the hidden elements take up space in the web document.</p>
+			<h4>visibility:visible;</h4>
+			<p class="v1">visible: It is the default value. The element is show or visible normally in the web document.</p> 
+			<h4>visibility:hidden;</h4>
+			<p class="v2">hidden: This property hide the element from the page but takes up space in the document.</p>
+			<h4>visibility:collapse;</h4>
+			<table style="border:1px solid red;" class="v3">
+            <tr>
+                <th>visible</th>
+                <th>hidden</th>
+                <th>collapse</th>
+            </tr>
+        </table>
+		</div>
+		
+			<h3>Display property</h3>
+			<p>The Display property in CSS defines how the components(div, hyperlink, heading, etc) are going to be placed on the web page. As the name suggests, this property is used to define the display of the different parts of a web page. </p>
+			<div>
+				<p>Display : inline</p>
+				<p>The inline element takes the required width only. It doesn't force the line break so the flow of text doesn't break in inline example.</p>
+				<p class="dis_inl">HTML</p>
+				<p class="dis_inl">CSS</p>
+				<p class="dis_inl">Javascript</p>
+				<p>Display : block</p>
+				<p>The CSS display block element takes as much as horizontal space as they can. Means the block element takes the full available width. They make a line break before and after them.</p>
+				<p class="dis_block">HTML</p>
+				<p class="dis_block">CSS</p>
+				<p class="dis_block">Javascript</p>
+				
+				<p>Display:none</p>
+				<p>The "none" value totally removes the element from the page. It will not take any space.</p>
+				<p class="dis_none">HTML</p>
+				<p class="dis_none">CSS</p>
+				<p class="dis_none">Javascript</p>
+				<p>Display:list-item</p>
+				<p>The list-item keyword causes the element to generate a ::marker pseudo-element with the content specified by its list-style properties (for example a bullet point) together with a principal box of the specified type for its own contents.</p>
+				<div class="dlist">List item1</div>
+				<p>Content Property</p>
+				<p>The content property in CSS is used to generate the content dynamically (during run time). It is used to generate content ::before & ::after pseudo element.</p>
+				<p class="a">to css</p>
+			</div>
+				<div class="marg1">
+					<p><h3>Margins and Padding</h3></p>
+					<p>CSS margins are used to create space around the element. We can set the different size of margins for individual sides(top, right, bottom, left).
+					<p id="padd">This is a parapraph with padding</p>
+					<p id="mar">This is a parapraph with margin</p>
+				
+				<a href="#top">Go to the top!</a>
+				<div id="bottom"><h3>Bottom of the page</h3></div>
+
+				
+				
+			
+	</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>CSS Effects</title>
+	  
+      <style>
+	 
+      h1 {
+         color: red; 
+		 text-align:center;
+      }
+	  body {
+			background-color: lightblue;
+		}
+	 #ani {  
+			width: 100px;  
+			height: 100px;  
+			background: red;  
+			position: relative;  
+			-webkit-animation: myfirst 5s; 
+			animation: myfirst 5s; 
+			animation-delay: 2s;
+			animation-iteration-count: 3;			
+		}  
+		@-webkit-keyframes myfirst {  
+			0%   {background:red; left:0px; top:0px;}  
+			25%  {background:yellow; left:200px; top:0px;}  
+			50%  {background:blue; left:100px; top:200px;}  
+			75%  {background:green; left:0px; top:100px;}  
+			100% {background:red; left:0px; top:0px;}  
+		}  
+		#static {
+				position: static;
+				border: 3px solid #73AD21;
+		}
+		#relative {
+				position: relative;
+				left: 30px;
+				border: 3px solid #73AD21;
+		}
+		#fixed {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 300px;
+				border: 3px solid #73AD21;
+		}
+		#absolute {
+				position: absolute;
+				top: 80px;
+				right: 0;
+				width: 200px;
+				height: 150px;
+				border: 3px solid #73AD21;
+		}
+		#sticky {
+				position: -webkit-sticky; 
+				position: sticky;
+				top: 0;
+				background-color: green;
+				border: 2px solid #4CAF50;
+		}
+		#scroll {
+				background-color: yellow;
+				width: 200px;
+				height: 100px;
+				border: 1px dotted black;
+				overflow: scroll;
+		}
+		img {
+			opacity: 0.5;
+		}
+      </style>
+   </head>	
+   <body>
+	<div id="ani">
+      <h1>CSS Effects</h1>
+	</div>  
+	<h1>CSS Effects</h1>
+	  <p>CSS allows animation of HTML elements without using JavaScript or Flash.</p>
+	<p><h3>The position Property</h3></p>
+	<p>The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).</p>
+		<div id="staic">
+			<h4>position: static</h4>
+			<p>HTML elements are positioned static by default.Static positioned elements are not affected by the top, bottom, left, and right properties.
+			An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:</p>
+		</div>
+		<div>
+			<h4>position: relative</h4>
+			<p id="relative">An element with position: relative; is positioned relative to its normal position.Setting the top, right, bottom, and left properties of a  relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.</p>
+		</div>
+		<div id="fixed">
+			<h4>position: fixed;</h4>
+		</div>
+		<h4>position: fixed;</h4>
+			<p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.</p>
+		<div id="absolute">			
+			<h4>position: absolute</h4>
+			<p>An element with position: absolute; is positioned relative to the nearest positioned ancestor </p>
+		</div>
+		<div id="sticky">
+			<h4>position: sticky;</h4>
+			<p>An element with position: sticky; is positioned based on the user's scroll position.</p>
+		</div>
+		<h4>Overflow: scroll</h4>
+		<p>Setting the overflow value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need it):</p>
+
+		<div ID="scroll">Youcan use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+		<h4>Opecity to image</h4>
+		<p>Image with 50% opacity:</p>
+		<img src="css.png" width="170" height="100">
+   </body>	
+</html>

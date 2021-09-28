@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function validateForm() {
+		let x = document.forms["myForm"]["fname"].value;
+		if (x == "") {
+			alert("Name must be filled out");
+		return false;
+		}
+	}
+	</script>
+	<script>
+	function setCookie(cname,cvalue,exdays) {
+		const d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		let expires = "expires=" + d.toGMTString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+
+	function getCookie(cname) {
+		let gname = cname + "=";
+		let decodedCookie = decodeURIComponent(document.cookie);
+		let ca = decodedCookie.split(';');
+		for(let i = 0; i < ca.length; i++) {
+			let c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(gname) == 0) {
+				return c.substring(gname.length, c.length);
+			}
+		}
+	return "";
+	}
+
+	function checkCookie() {
+		let user = getCookie("username");
+		if (user != "") {
+			alert("Welcome again " + user);
+		} else {
+			user = prompt("Please enter your name:","");
+				if (user != "" && user != null) {
+					setCookie("username", user, 30);
+				}
+		}
+	}
+	</script>
+</head>
+<body onload="checkCookie()">
+
+	<h2>Java Script Events</h2>
+
+	<p id="butt"></p>
+	<h3>Event listener</h3>
+	<p>Display current date and time</p>
+	<button type="button"
+	onclick="document.getElementById('butt').innerHTML = Date()">
+	Click me to display Date and Time.</button>
+	
+	<h3>Validation</h3>
+	<p>HTML form validation can be done by JavaScript.If a form field (fname) is empty, this function alerts a message, and returns false, to prevent the form from being submitted:</p>
+	
+	<form name="myForm" onsubmit="return validateForm()" method="post">
+		Name: <input type="text" name="fname">
+		<input type="submit" value="Submit">
+	</form>
+
+	<h3>JavaScript console.log() Method</h3>
+	<p>The console.log() method writes a message to the console.The console is useful for testing purposes.</p>
+	<script>
+		var myObj = { firsname : "Ajmal", lastname : "Khan" };
+		console.log(myObj);
+	</script>
+	
+	<h3>Cookies</h3>
+	<p>Cookies are data, stored in small text files, on your computer.When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user.Cookies were invented to solve the problem "how to remember information about the user":
+	<ul>
+		<li>When a user visits a web page, his/her name can be stored in a cookie.	</li>
+		<li>Next time the user visits the page, the cookie "remembers" his/her name.</li>
+	</ul>
+	</p>
+
+	<h3>JavaScript JSON</h3>
+	<p>JSON is a format for storing and transporting data.JSON is often used when data is sent from a server to a web page.
+	<ul>
+		<li>JSON stands for JavaScript Object Notation</li>
+		<li>JSON is a lightweight data interchange format</li>
+		<li>JSON is language independent </li>
+		<li>JSON is "self-describing" and easy to understand</li>
+	<ul>
+	</p>
+	
+	<p id="json"></p>
+
+		<script>
+			let text = '{"students":[' +'{"firstName":"Aydin","lastName":"Khan" },' +
+										'{"firstName":"Ayzam","lastName":"Khan" },' +
+										'{"firstName":"Ajmal","lastName":"Khan" }]}';
+
+			const obj = JSON.parse(text);
+			document.getElementById("json").innerHTML =obj.students[1].firstName + " " + obj.students[1].lastName;
+		</script>
+</body>
+</html> 

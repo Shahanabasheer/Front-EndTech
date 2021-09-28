@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h2>this Keyword</h2>
+	<p>The JavaScript this keyword refers to the object it belongs to.</p>
+	<p id="thisk"></p>
+	<button onclick="myFunction()">Click me</button>
+	<script>
+	 const person = {
+		firstName: "Aydin",
+		lastName: "Khan",
+		id: 009,
+		fullName : function() {
+			return this.firstName + " " + this.lastName;
+		}
+	};
+
+	
+	document.getElementById("thisk").innerHTML = person.fullName();
+		function myFunction() {
+			var myobj = document.getElementById("thisk");
+			myobj.remove();
+		}
+
+	</script>
+	<h3>Function_call()</h3>
+	<p>The call() method is a predefined JavaScript method.It can be used to invoke (call) a method with an owner object as an argument (parameter).</p>
+	<p id ="call"></p>
+	<script>
+		const pers = {
+			fullName: function() {
+			return this.firstName + " " + this.lastName;
+			}
+		}
+		const pers1 = {
+			firstName:"Aydin",
+			lastName: "Khan"
+		}
+		const pers2 = {
+			firstName:"Ayzam",
+			lastName: "Ali"
+		}
+		document.getElementById("call").innerHTML = pers.fullName.call(pers1); 
+	</script>
+	<h3>Function Apply</h3>
+	<p>With the apply() method, you can write a method that can be used on different objects.</p>
+	
+	<p id="apply"></p>
+	<script>
+		const per = {
+			fullName: function() {
+			return this.firstName + " " + this.lastName;
+			}
+		}
+
+		const per1 = {
+			firstName:"Ajmal",
+			lastName: "Khan"
+			}
+
+		document.getElementById("apply").innerHTML = per.fullName.apply(per1); 
+	</script>
+	<h3>Counter</h3>
+	<p id="count"></p>
+	<button onClick="myTimer = setInterval(myCounter, 100)">Count</button>
+	<script>
+		var x = 0;
+		function myCounter() {
+		document.getElementById("count").innerHTML = ++x;
+		}
+	</script> 
+
+	<h3>Prorotype</h3>
+	<p>The JavaScript prototype property allows you to add new properties to object constructors</p>
+	<p id="proto"></p>
+		<script>
+			function personC(first,middle, last, age) {
+				this.firstName = first;
+				this.middleName=middle;
+				this.lastName = last;
+				this.age = age;
+				}
+
+			personC.prototype.nationality = "Indian";
+
+			const mySon = new personC("Ayzam","Ali", "Khan", 10);
+			document.getElementById("proto").innerHTML ="The nationality of my son is " + mySon.nationality; 
+		</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>  
+ <html>  
+ <head>  
+  <title>Form in HTML</title>  
+</head>  
+ <body>  
+     <h2>Registration form</h2> 
+	<marquee>Fill this form for registration</marquee>	 
+    <form>  
+     <fieldset>  
+        <legend>User personal information</legend>  
+        <label>Enter your full name</label><br>  
+        <input type="text" name="name" size=50><br>  
+		<label>Enter your last name</label><br>  
+		<br><input type="text" id="lname" name="lname" disabled></br>
+         <label>Enter your email</label><br>  
+         <input type="email" name="email"><br>
+		 <br><label for="username">Username:</label>
+		<input type="text" id="username" name="username" maxlength="10" required></br>
+		 <label>Enter your password</label><br>  
+         <input type="password" name="pass"><br>  
+         <label>confirm your password</label><br>  
+         <input type="password" name="pass"><br>  
+         <br><label>Enter your gender</label><br>  
+		 <input type="radio" id="gender" name="gender" value="male"/>Male  <br>  
+         <input type="radio" id="gender" name="gender" value="female"/>Female <br/>    
+         <input type="radio" id="gender" name="gender" value="others"/>others <br/>   
+		 <br><label>Languages known</label></br>
+		 <input type="checkbox" id="English" name="language" value="English">
+			<label for="English">English</label>
+		 <input type="checkbox" id="Hindi" name="language" value="Hindi">
+			<label for="Hindi">Hindi</label>
+		 <input type="checkbox" id="Kannada" name="language" value="Kannada">
+			<label for="Kannada">Kannada</label>
+          <br>Enter your Address:<br>  
+         <textarea></textarea><br>  
+		 <br><label>Enter Date of birth</label> </br>  
+		<input type="date" name="dob"><br><br>  
+		<br><label>Enter your age: </label>  
+		<input type="number" name="num" min="50" max="80">  
+		<input type="submit">  </br>
+		<br><label>Choose month to start course </label>  
+		<input type="month" name="newMonth">  </br>
+		<br><label>Choose week to start course </label> 
+		<input type="week" name="nweek">  
+		<br><label>Pick your Favorite color: </label></br>  
+		<input type="color" name="upclick" value="#a52a2a"> Upclick<br><br>  
+		<input type="color" name="downclick" value="#f5f5dc"> Downclick  </br>
+		<br><label for="country">Country:</label>
+		<input type="text" id="country" name="country" value="India" readonly></br>
+		<br><label>Upload your resume </label>  
+		<input type="file" name="newfile"></br>  
+        <br><input type="submit" value="sign-up"> </br> 
+		<p>Document content goes here...</p>
+      
+		<iframe src = "/html/menu.htm" width = "555" height = "200">
+         Sorry your browser does not support inline frames.
+		</iframe>
+     </fieldset>  
+  </form>  
+ </body>  
+</html>  

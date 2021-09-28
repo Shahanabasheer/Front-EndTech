@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h1>Java Script Basics</h1>
+	<h3>Array sort</h3>
+	<p>Sort fruits name in descending order</p>
+	
+	<button onclick="myFunction()">Sort</button>
+	<p id="asort"></p>
+
+	<script>
+		const fruits = ["Mango", "Banana", "Grape","Orange"];
+		document.getElementById("asort").innerHTML = fruits;
+				
+	function myFunction() {
+		fruits.sort();
+		document.getElementById("asort").innerHTML = fruits;
+	}
+	</script>
+	
+	<h3>For In Loop</h3>
+	<p>The JavaScript for in statement loops through the properties of an Object</p>
+	<p id="forin"></p>
+	<script>
+		const person1 = {fname:"Aydin", lname:"Zia", age:25}; 
+
+		let txt = "";
+		for (let x in person1) {
+		txt += person1[x] + " ";
+		}
+
+	document.getElementById("forin").innerHTML = txt;
+	</script>
+	
+	<h3>Object Properties</h3>
+	<p>Properties are the values associated with a JavaScript object.A JavaScript object is a collection of unordered properties.Properties can usually be changed, added, and deleted, but some are read only.</p>
+	<p>objectName.property  </p>
+	<p id="objpro"></p>
+	<script>
+		const person2 = {
+			firstname: "Aydin",
+			middlename:"Zia",
+			lastname: "Khan",
+			age: 25,
+		};
+
+	document.getElementById("objpro").innerHTML = person2.firstname+ " is " + person2.age + " years old.";
+	
+	</script>
+	
+	<p>objectName["property"] </p>
+	<p id="obj1"><>
+	<script>
+		document.getElementById("obj1").innerHTML = person2["firstname"] + " " +person2["middlename"] + " is " + person2["age"] + " years old.";
+	</script>
+	
+	<h3>Variable Hoisting</h3>
+	<p>Hoisting is JavaScript's default behavior of moving declarations to the top.</p>
+	<p id="vhoisting"></p>
+
+		<script>
+		x = 5; 
+
+		elem = document.getElementById("vhoisting"); 
+		elem.innerHTML = x;           
+
+		var x; 
+	</script>
+	<h3>Strict mode</h3>
+	<p>The purpose of "use strict" is to indicate that the code should be executed in "strict mode".With strict mode, you can not, for example, use undeclared variables.</p>
+	<script>
+		"use strict";
+		x = 3.14;  
+	</script>
+
+</body>
+</html>

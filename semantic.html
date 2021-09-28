@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semantic Elements</title>
+    <style type="text/css">
+	h1::first-line {   
+			font-family: Times New Roman;  
+			font-size: 1cm;  
+			color: red; 
+			text-align:center;  	
+		} 
+	
+     span{
+         color: black;
+         font-size: 25px ;
+         font-weight: bold;  
+            }
+	table, tr, td{
+            border: 1px solid black;
+        }
+	th{
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+	<hgroup>
+	<h1>HTML5</h1>
+	<h2>Semantic and Non semantic Elements</h2>
+	</hgroup>
+    <div>
+        <span>Non semantic elements</span> <br>
+        <p>Non-Semantic elements don’t have any meaning. They don’t tell anything about the content they contain. They can be used with different attributes to mark up semantics common to a group.</p>
+		<p>Following is the list of some non-semantic elements:
+		<ul>
+			<li>div</li>
+			<li>span</li>
+		</ul>
+    </div>
+	<article> 
+         <h2>Semnatic Elements</h2> 
+         <p>These elements simply mean, elements with meaning. The reason being, there definition in the code tells the browser and the developer what they are supposed to do. Framing in simpler words, these elements describe the type of content they are supposed to contain.</p> 
+      </article> 
+	  <table>
+          <tr>
+              <th>Semantic Tag</th>
+              <th>Description</th>
+          </tr>
+          <tr>
+              <td>article</td>
+              <td>Defines an article</td>
+          </tr>
+          <tr>
+              <td>aside</td>
+              <td>Defines content aside from the page content</td>
+          </tr>
+      </table> 
+	  <h3>aside Tag</h3>
+	  <p>The <mark>aside</mark> element represent the content which is indirectly giving information to the main content of the page. It is frequently represented as a sidebar.</p>
+	  <aside>
+		<h3>Inside Aside tag</h3>
+		<p>The <mark>aside</mark> tag is used to describe the main object of the web page in a shorter way like a highlighter. It basically identifies the content that is related to the primary content of the web page but does not constitute the main intent of the primary page. The aside tag contains mainly author information, links, related content, and so on.</p>
+	  </aside>
+	  <section>
+		<h3>Section tag</h3>
+		<p><mark>Section</mark> tag defines the section of documents such as chapters, headers, footers or any other sections. The section tag divides the content into section and subsections. The section tag is used when requirements of two headers or footers or any other section of documents needed. Section tag grouped the generic block of related contents. The main advantage of the section tag is, it is a semantic element, which describes its meaning to both browser and developer.</p>
+	  </section>
+	  <section>
+		<p>The section element is used to represent the standalone section within an HTML document. A page can have various sections and each section can contain any content, but headings for each section is not mandatory.</p>
+	  </section>
+	  <nav>
+		<a href="https://en.wikipedia.org/wiki/HTML">HTML</a> |
+		<a href="https://en.wikipedia.org/wiki/CSS">CSS</a> |
+		<a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> |
+  	  </nav>
+	  <figure>
+		<img src="F:\SHAHAANDATAS\Datas\Jalatech\htmls\imgfi.gif" alt="figures" width="304" height="228">
+		<figcaption>Semantic Elements</figcaption>
+	</figure>
+	<article>
+	<header>
+		<h3>Header</h3>
+		<p>The header element specifies a header for a document or section</p>
+	</header>
+		<p>The header element should be used as a container for introductory content.You can have several header elements in one document.</p>
+	</article>
+	<footer>
+		<h5>Footer</h5>
+		<p>Developed by: Shahana Basheer</p>
+		<p>Contact information
+		mail id: shahaan.basheer70@gmail.com</p>
+		</footer>
+</body>
+</html>
